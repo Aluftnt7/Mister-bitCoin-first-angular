@@ -1,0 +1,13 @@
+<section class="contact-edit">
+    <div class="img-container">
+        <img src='https://robohash.org/{{contactEdit.value.name}}' class="contact-img" *ngIf="contactEdit.value.name" />
+    </div>
+    <form [formGroup]="contactEdit" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="name" placeholder="Full name" />
+        <input type="email" formControlName="email" placeholder="Email" />
+        <input type="text" formControlName="phone" placeholder="Phone number" />
+        <input type="hidden" formControlName="_id" />
+        <button type="submit" [disabled]="!contactEdit.valid" class="btn">SAVE</button>
+    </form>
+    <img src="./assets/img/trash.svg" (click)="deleteContact()" class="delete-btn" />
+</section>

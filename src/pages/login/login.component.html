@@ -1,0 +1,10 @@
+<section>
+    <form #f="ngForm" class="login-form" (ngSubmit)="onSubmit()" *ngIf="!loggedInUser" else welcome>
+        <input type="text" [(ngModel)]="userName" placeholder="Please enter your name:" [ngModelOptions]="{standalone: true}">
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<section #welcome *ngIf="loggedInUser">
+    <h1>Welcome Back {{loggedInUser.name}}</h1>
+</section>

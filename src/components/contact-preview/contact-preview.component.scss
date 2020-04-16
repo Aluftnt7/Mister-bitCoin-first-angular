@@ -1,0 +1,33 @@
+@import '../../syles/setup/mixins';
+.contact-preview {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // border-bottom: 1px solid lightgray;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    @include for-medium-mobile-layout {
+        width: 100%;
+    }
+    h3 {
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+    .contact-img {
+        width: 4em;
+        height: auto;
+        margin-right: 5px;
+        margin: 0;
+        border: 1.5px solid rgb(206, 206, 206);
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}

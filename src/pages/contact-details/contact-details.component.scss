@@ -1,0 +1,16 @@
+.contact-details {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact-img {
+            margin: 0;
+            border: 1.5px solid rgb(206, 206, 206);
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    .edit-img {
+        width: 4em;
+    }
+}

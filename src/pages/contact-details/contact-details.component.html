@@ -1,0 +1,13 @@
+<section class="contact-details" *ngIf="currContact">
+    <a routerLink="/Contact/Edit/{{currContact._id}}">
+        <img src="./assets/img/edit.svg" alt="image" class="edit-img" title="Edit">
+    </a>
+    <div class="contact-container">
+        <h3> {{currContact.name}}</h3>
+        <img src='https://robohash.org/{{currContact.name}}' class="contact-img" />
+        <h4>Phone: {{currContact.phone}}</h4>
+        <h4>Email: {{currContact.email}}</h4>
+    </div>
+</section>
+<transfer-fund [contact]="currContact"></transfer-fund>
+<move-list [title]="title" [moveList]="moveList"></move-list>

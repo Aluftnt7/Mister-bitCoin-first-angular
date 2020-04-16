@@ -1,0 +1,20 @@
+<div *ngIf="title; else homeMoveList">
+    <h2 *ngIf="(movesWithContact$ | async).length > 0">Your moves</h2>
+    <section class="move-list " *ngFor="let move of movesWithContact$ | async ">
+        <h4>At {{move.at | date:"medium"}}</h4>
+        <h4>You've transfered {{move.amount}} BitCoins</h4>
+        <hr>
+    </section>
+</div>
+
+<ng-template #homeMoveList>
+    <section *ngIf="splicedMoveList.length >= 3">
+        <h1>Here are your 3 last moves</h1>
+        <div *ngFor="let move of splicedMoveList">
+            <h4>At {{move.at | date:"medium"}}</h4>
+            <h4>You've transfered {{move.amount}} BitCoins</h4>
+            <h4>To {{move.to}}</h4>
+            <hr>
+        </div>
+    </section>
+    <ng-template>

@@ -1,0 +1,11 @@
+<section class="welcome-user">
+    <div class="img-name-container">
+        <h4>Hi there {{user.name}}</h4>
+        <img src="https://robohash.org/{{user.name}}" class="contact-img" />
+    </div>
+    <h3>Current Balance:</h3>
+    <h4> {{user.coins}} Coins</h4>
+    <h4>{{coinsToDollar | number: '1.0-0' }}$</h4>
+    <h4>Current BitCoin rate is {{rate}}</h4>
+</section>
+<move-list [moveList]="moveList"></move-list>

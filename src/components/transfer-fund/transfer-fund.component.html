@@ -1,0 +1,12 @@
+<section class="transfer-fund-container">
+    <h3>Transfer coins to {{contact.name}}</h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="form__group field">
+        <div class="field">
+            <input type="number" id='amount' ngModel name="amount" class="form__field" placeholder="Amount?" min="1" max="loggedInUser.coins">
+            <label for="amount" class="form__label">
+              Amount?
+          </label>
+            <button type="submit" class="btn draw-border">Transfer</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,8 @@
+<section class="contact-list">
+    <contact-filter (onFilter)="onFilterHandler($event)" [filterBy]="filterBy"></contact-filter>
+    <div>
+        <contact-preview *ngFor="let contact of contacts" [contact]="contact" (setCurrContact)="setCurrContact($event)"></contact-preview>
+        <a routerLink="Edit"><img src="./assets/img/add.svg" title="Add user" class="add-user-img" /></a>
+    </div>
+
+</section>

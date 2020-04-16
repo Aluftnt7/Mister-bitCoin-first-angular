@@ -1,0 +1,11 @@
+@import '../../syles/setup/mixins';
+.add-user-img {
+    width: 4em;
+    position: fixed;
+    bottom: 0;
+    right: 34%;
+    margin: 10px 10px;
+    @include for-medium-mobile-layout {
+        right: 0;
+    }
+}

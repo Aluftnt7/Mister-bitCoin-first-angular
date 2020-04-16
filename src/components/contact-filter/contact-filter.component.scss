@@ -1,0 +1,12 @@
+@import '../../syles/setup/mixins';
+input {
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 5px;
+    height: 35px;
+    @include for-medium-mobile-layout {
+        width: 100%;
+    }
+}

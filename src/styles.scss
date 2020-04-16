@@ -1,0 +1,16 @@
+//SETUP
+@import '../src/syles/setup/functions';
+@import '../src/syles/setup/_mixins';
+@import '../src/syles/setup/variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+//BASE
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(50, 46, 63);
+    color: rgb(206, 206, 206);
+}
+
+a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+}

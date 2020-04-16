@@ -1,0 +1,15 @@
+.header {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    a {
+        margin: 0 5px 10px;
+        font-size: 1em;
+        text-decoration: none;
+        &.active {
+            border-bottom: 2px solid lightslategray;
+            color: #1abc9c;
+        }
+    }
+}
